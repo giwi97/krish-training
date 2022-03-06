@@ -1,0 +1,1 @@
+Write a program to find missing number in the given sequence. First number can be any random number and sequence follows (n+1) pattern.Find the missing number.

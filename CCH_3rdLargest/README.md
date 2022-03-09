@@ -1,0 +1,1 @@
+Write a Node js program to find 3rd largest number from the given series.

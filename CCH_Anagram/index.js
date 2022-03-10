@@ -1,15 +1,28 @@
-const inputText = "india aidni"
+const inputText = "listen sieent"
 const words = inputText.split(" ");
 const fWord = words[0];
 const sWord = words[1];
 
-checkAnagram(fWord, sWord);
+console.log("Words are: "+fWord+" and "+sWord);
+
+if(fWord.length == sWord.length){
+
+    checkAnagram(fWord, sWord);
+
+}else{
+
+    console.log("Word "+fWord+" and "+sWord+" are not anograms..")
+
+}
+
+
 
 function checkAnagram(word1, word2){
 
     let wordArr1 = [...word1];
     let wordArr2 = [...word2];
     let counter = 0;
+    let trigger = 0;
 
 
     for(let i = 0;i < word1.length;i++){
@@ -19,27 +32,26 @@ function checkAnagram(word1, word2){
             if(wordArr1[i] == wordArr2[j]){
 
                 counter++;
-                // console.log(counter);
-                // console.log(" "+wordArr1[i]+" "+wordArr2[j]);
+                trigger++;
 
-                for(let k = 0;k <= i;k++){
-
-                    if(wordArr1[k] == wordArr2[j]){
-
-                        counter--;
-
-                    }
+                if(trigger != 1){
+                    counter--;
+                    trigger = 1;
 
                 }
+                
 
             }
+
+            
             
 
         }
+        trigger = 0;
 
     }
 
-    console.log(counter);
+
 
     if(counter == wordArr1.length){
 
